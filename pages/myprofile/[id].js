@@ -9,18 +9,18 @@ export async function getStaticProps({params}) {
     // const req = await fetch(url);
     // const data = await req.json();
 
-    // 環境に応じてベースURLを自動切り替え
-    const baseUrl = getBaseUrl();
-    const url = `${baseUrl}/${params.id}.json`;
-    const req = await fetch(url);
-    const data = await req.json();
+    // // 環境に応じてベースURLを自動切り替え
+    // const baseUrl = getBaseUrl();
+    // const url = `${baseUrl}/${params.id}.json`;
+    // const req = await fetch(url);
+    // const data = await req.json();
     
     // ローカルファイルを直接読み込む場合（fetchを使わない方法）
-    // const fs = require('fs');
-    // const path = require('path');
-    // const filePath = path.join(process.cwd(), 'public', `${params.id}.json`);
-    // const fileContents = fs.readFileSync(filePath, 'utf8');
-    // const data = JSON.parse(fileContents);
+    const fs = require('fs');
+    const path = require('path');
+    const filePath = path.join(process.cwd(), 'public', `${params.id}.json`);
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const data = JSON.parse(fileContents);
 
     return {
         props: {
@@ -32,18 +32,18 @@ export async function getStaticPaths(){
     // const req = await fetch('http://127.0.0.1:3000/myprofile.json');
     // const data = await req.json();
 
-    // 環境に応じてベースURLを自動切り替え
-    const baseUrl = getBaseUrl();
-    const url = `${baseUrl}/myprofile.json`;
-    const req = await fetch(url);
-    const data = await req.json();
+    // // 環境に応じてベースURLを自動切り替え
+    // const baseUrl = getBaseUrl();
+    // const url = `${baseUrl}/myprofile.json`;
+    // const req = await fetch(url);
+    // const data = await req.json();
     
     // ローカルファイルを直接読み込む場合（fetchを使わない方法）
-    // const fs = require('fs');
-    // const path = require('path');
-    // const filePath = path.join(process.cwd(), 'public', 'myprofile.json');
-    // const fileContents = fs.readFileSync(filePath, 'utf8');
-    // const data = JSON.parse(fileContents);
+    const fs = require('fs');
+    const path = require('path');
+    const filePath = path.join(process.cwd(), 'public', 'myprofile.json');
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const data = JSON.parse(fileContents);
 
     const paths = data.map(myprofile => {
         return {
