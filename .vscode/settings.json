@@ -1,0 +1,9 @@
+{
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "javascript.preferences.includePackageJsonAutoImports": "on",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "debug.terminal.clearBeforeReusing": true,
+  "debug.javascript.autoAttachFilter": "smart"
+}
