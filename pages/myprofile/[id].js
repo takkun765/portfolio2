@@ -83,6 +83,12 @@ const MyProfile = ( {myprofile} ) => {
             <img src={myprofile.img_12} width={myprofile.width_13} height={myprofile.height_13}/>
             <img src={myprofile.img_13} width={myprofile.width_14} height={myprofile.height_14}/>
         <p className={styles.footer}><Link href="/myprofile">戻る</Link></p>
+        <form method="post">
+            <div>
+                <label for="comment">コメント</label>
+                <input type="message" id="comment" name="comment"></input>
+            </div>
+        </form>
     </main>
     </div>;
 }
