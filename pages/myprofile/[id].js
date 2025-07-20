@@ -61,7 +61,7 @@ export async function getStaticPaths(){
 
 const MyProfile = ( {myprofile} ) => {
     const router = useRouter();
-    return <div><main  className={styles.main} >
+    return <div><main className={styles.main} >
         <h2 className={styles.title}>制作物：{myprofile.name}</h2>
         <p>{myprofile.caption_1}</p> <br/>
             <iframe width={myprofile.width_1} height={myprofile.height_1} 
@@ -84,7 +84,7 @@ const MyProfile = ( {myprofile} ) => {
             <img src={myprofile.img_13} width={myprofile.width_14} height={myprofile.height_14}/>
         <p className={styles.footer}><Link href="/myprofile">戻る</Link></p>
         <form method="post">
-            <div>
+            <div className={styles.main}>
                 <label for="comment">コメント</label>
                 <input type="message" id="comment" name="comment"></input>
             </div>
