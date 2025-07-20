@@ -85,7 +85,7 @@ const MyProfile = ( {myprofile} ) => {
         <p className={styles.footer}><Link href="/myprofile">戻る</Link></p>
         <form method="post">
             <div className={styles.footer}>
-                <label for="comment">コメント</label><br/>
+                <label for="comment">コメント</label>
                 <input type="message" id="comment" name="comment"></input>
             </div>
             <ol>
